@@ -262,7 +262,8 @@ hr {
 
 /* Testimonial section  */
 .testimonial__section {
-  /* margin: 10rem; */
+  margin: 10rem;
+  padding-top: 5rem;
 
   /* background-color: azure; */
 }
@@ -272,7 +273,7 @@ hr {
   justify-content: center;
   flex-direction: column;
   gap: 15rem;
-  margin: 10rem;
+  /* margin: 10rem; */
   margin-bottom: 3rem;
 }
 .testimonial__section--top {
@@ -321,32 +322,11 @@ hr {
   font-size: 1.8rem;
   text-align: center;
 }
-/* .testimonial__section1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  } */
+
 .testimonial__img1 > img {
   position: absolute;
-  top: 307rem;
-  left: 24rem;
-  height: 12rem;
-  width: 12rem;
-  border-radius: 50rem;
-}
-.testimonial__img2 > img {
-  position: absolute;
-  top: 307rem;
-  left: 65rem;
-  height: 12rem;
-  width: 12rem;
-  border-radius: 50rem;
-}
-.testimonial__img3 > img {
-  position: absolute;
-  top: 307rem;
-  left: 105rem;
+  top: -9rem;
+  left: 14rem;
   height: 12rem;
   width: 12rem;
   border-radius: 50rem;
@@ -584,4 +564,80 @@ hr {
   font-size: 1.2rem;
   text-align: center;
   color: #888888;
+}
+
+/* Responsive css start here */
+@media only screen and (max-width: 1200px) {
+  .testimonial__img1 > img {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .testimonial_section--box {
+    padding: 1.5rem 1rem;
+  }
+  .testimonial_section--box > p {
+    font-size: 1.1rem;
+  }
+  .testimonial_section--box > h1 {
+    font-size: 1.2rem;
+  }
+  .testimonial__section--main {
+    gap: 3rem;
+  }
+  .image_section--right > p {
+    font-size: 1.2rem;
+  }
+  .image_section--right > h3 {
+    font-size: 2rem;
+  }
+  .image__section {
+    flex-direction: column;
+    gap: 0;
+    margin: 4rem;
+    margin-bottom: -19rem;
+  }
+  .image_section--left {
+    width: 100%;
+    height: 400px;
+  }
+  .second-right {
+    width: 100%;
+    height: auto;
+  }
+  .image_section--right {
+    width: 100%;
+    padding-left: 0;
+  }
+  .items__flex {
+    gap: 2rem;
+  }
+  .hero__section--left > h1 {
+    font-size: 4rem;
+  }
+  .category__section {
+    margin: 4rem;
+  }
+  .contact__section {
+    padding: 2rem;
+  }
+  .form__controller {
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .items__section {
+    margin: 4rem;
+  }
+  .testimonial__section {
+    margin: 4rem;
+    padding-top: 18rem;
+  }
+  .testimonial__section--down {
+    justify-content: space-evenly;
+  }
+  .footer__section {
+    padding: 4rem;
+  }
 }

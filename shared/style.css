@@ -21,6 +21,9 @@
   justify-content: center;
   gap: 1.5rem;
 }
+.logo {
+  position: relative;
+}
 .logo > img {
   height: 70px;
   width: auto;
