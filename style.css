@@ -641,3 +641,21 @@ hr {
     padding: 4rem;
   }
 }
+@media only screen and (max-width: 976px) {
+  .hero__section--left > h1 {
+    font-size: 3rem;
+  }
+  span {
+    font-size: 3rem;
+  }
+
+  .hero__section {
+    padding: 3rem 4rem;
+  }
+  .hero__section--left > p {
+    font-size: 1.2rem;
+  }
+  .contact__section--main {
+    padding: 0;
+  }
+}
