@@ -704,6 +704,10 @@ hr {
   .hero__section--left > h1 {
     font-size: 3rem;
   }
+  .btn {
+    padding: 1rem 1rem;
+  }
+
   span {
     font-size: 3rem;
   }
@@ -718,3 +722,39 @@ hr {
     padding: 0;
   }
 }
+/* Hamburger Menu styling */
+/* .hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px auto;
+} */
+
+/* responsive for the navbar */
+/* @media (max-width: 768px) {
+  .nav_lists {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+  }
+  .menu li {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+} */
