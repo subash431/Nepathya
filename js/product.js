@@ -28,7 +28,7 @@ function populateProduct() {
         <div class="product__rating">
           ${rate}
         </div>
-        <button class="p-btn outline rounded">Add To Cart</button>
+        <button onclick="addToCart(${item.id})" class="p-btn outline rounded">Add To Cart</button>
       </div>`;
         productsList.append(product);
         setTimeout(() => {
@@ -39,4 +39,30 @@ function populateProduct() {
       console.log("Error loading products");
     }
   });
+}
+
+function addToCart(productId) {
+  DB.addToCart(
+    user.username,
+    productId,
+    function (success) {
+      var cartItemCount = document.getElementById("cartItemCount");
+      if (cartItemCount.innerText != "") {
+        let count = cartItemCount.innerText.substring(
+          1,
+          cartItemCount.innerText.length - 1
+        );
+        count++;
+        cartItemCount.innerText = `(${count})`;
+      } else {
+        cartItemCount.innerText = `(1)`;
+      }
+      showToast("s", success);
+      setTimeout(() => {}, 2000);
+    },
+    function (error) {
+      showToast("e", error);
+      setTimeout(() => {}, 3000);
+    }
+  );
 }

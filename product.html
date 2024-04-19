@@ -30,6 +30,7 @@
             <li>
               <a href="index.html"
                 ><i class="fa-solid fa-cart-shopping"></i>Cart
+                <span id="cartItemCount"></span>
               </a>
             </li>
             <li><a href="index.html" id="userAccount">Login</a></li>
@@ -113,6 +114,15 @@
       <p>&copy; Copyright Reserved @ Allan's pastry Shop Pvt.Ltd-2024</p>
     </footer>
     <!-- End of footer  -->
+
+        <!-- Toasts -->
+        <div id="success-toast" class="toast-box success">
+          <i class="fas fa-check-circle"></i><span id="success-toast-text"></span>
+        </div>
+        <div id="error-toast" class="toast-box error">
+          <i class="fas fa-times-circle"></i> <span id="error-toast-text"></span>
+        </div>
+        <!-- End Toasts -->
     <script src="./js/db.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/product.js"></script>

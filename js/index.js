@@ -1,12 +1,16 @@
+var user = null;
 function checkUser() {
-  const user = localStorage.getItem("user") ?? null;
-  if (user) {
+  const luser = localStorage.getItem("user") ?? null;
+  if (luser) {
     // Replace the login with username:
-    const jsonUser = JSON.parse(user);
+    const jsonUser = JSON.parse(luser);
+    user = jsonUser;
     const userIcon = document.getElementById("userAccount");
     userIcon.innerHTML = jsonUser.username;
     userIcon.style.fontWeight = 700;
     userIcon.style.borderBottom = "2px solid white";
+
+    updateCartCount();
   }
 }
 

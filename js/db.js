@@ -2,7 +2,6 @@ const DB = {
   initialized: false,
   onInitializedCallbacks: [],
 
-  // Function to initialize the database
   initialize: function (predefinedProducts) {
     if (!this.initialized) {
       const request = indexedDB.open("pastry_shop", 1);
@@ -13,7 +12,6 @@ const DB = {
     }
   },
 
-  // Event handler for database upgrade
   handleUpgrade: function (event, predefinedProducts) {
     const db = event.target.result;
 
@@ -37,7 +35,14 @@ const DB = {
       unique: false,
     });
 
-    // Add predefined products to the 'products' object store
+    // Create 'carts' table
+    const cartObjectStore = db.createObjectStore("carts", {
+      keyPath: "username",
+      autoIncrement: true,
+    });
+    cartObjectStore.createIndex("productId", "productId", { unique: true });
+    cartObjectStore.createIndex("quantity", "quantity", { unique: false });
+
     const transaction = event.target.transaction;
     const productStore = transaction.objectStore("products");
     predefinedProducts.forEach(function (product) {
@@ -45,17 +50,14 @@ const DB = {
     });
   },
 
-  // Event handler for successful database initialization
   handleSuccess: function (event) {
     this.db = event.target.result;
     this.initialized = true;
 
-    // Call all registered callbacks when the database is initialized
     this.onInitializedCallbacks.forEach((callback) => callback());
-    this.onInitializedCallbacks = []; // Clear the callbacks array
+    this.onInitializedCallbacks = [];
   },
 
-  // Event handler for database initialization error
   handleError: function (event) {
     console.error("Error opening database:", event.target.error);
   },
@@ -71,7 +73,6 @@ const DB = {
     }
   },
 
-  // Function to sign up a new user
   signup: function (username, email, password) {
     const transaction = this.db.transaction(["users"], "readwrite");
     const userObjectStore = transaction.objectStore("users");
@@ -87,9 +88,7 @@ const DB = {
     };
   },
 
-  // Function to login a user
   login: function (username, password, callback) {
-    console.log(username, password);
     const transaction = this.db.transaction(["users"], "readonly");
     const userObjectStore = transaction.objectStore("users");
     const request = userObjectStore.get(username);
@@ -109,7 +108,6 @@ const DB = {
     };
   },
 
-  // Function to load all products
   getProducts: function (callback) {
     const transaction = this.db.transaction(["products"], "readonly");
     const productObjectStore = transaction.objectStore("products");
@@ -132,9 +130,79 @@ const DB = {
       console.error("Error on loading products:", event.target.error);
     };
   },
+
+  addToCart: function (username, productId, successCallback, errorCallback) {
+    const transaction = this.db.transaction(["carts"], "readwrite");
+    const cartObjectStore = transaction.objectStore("carts");
+    const request = cartObjectStore.get(username);
+
+    request.onsuccess = function (event) {
+      const cart = event.target.result;
+      if (cart) {
+        // Cart exists, check if productId already exists
+        const existingProduct = cart.products.find(
+          (product) => product.productId === productId
+        );
+        if (existingProduct) {
+          // Product already exists, increment quantity
+          existingProduct.quantity++;
+          // Update the cart in the database
+          const updateRequest = cartObjectStore.put(cart);
+          updateRequest.onsuccess = function (event) {
+            if (typeof successCallback === "function") {
+              successCallback("Product quanity in cart updated successfully.");
+            }
+          };
+          updateRequest.onerror = function (event) {
+            if (typeof errorCallback === "function") {
+              errorCallback(
+                "Error incrementing product quantity: " + event.target.error
+              );
+            }
+          };
+        } else {
+          // Product doesn't exist, add it to the cart
+          cart.products.push({ productId, quantity: 1 });
+          // Update the cart in the database
+          const updateRequest = cartObjectStore.put(cart);
+          updateRequest.onsuccess = function (event) {
+            if (typeof successCallback === "function") {
+              successCallback("New product added to cart successfully.");
+            }
+          };
+          updateRequest.onerror = function (event) {
+            if (typeof errorCallback === "function") {
+              errorCallback(
+                "Error adding product to cart: " + event.target.error
+              );
+            }
+          };
+        }
+      } else {
+        // Cart doesn't exist, create a new one
+        const newCart = { username, products: [{ productId, quantity: 1 }] };
+        const addRequest = cartObjectStore.add(newCart);
+        addRequest.onsuccess = function (event) {
+          if (typeof successCallback === "function") {
+            successCallback("New cart created with product: " + productId);
+          }
+        };
+        addRequest.onerror = function (event) {
+          if (typeof errorCallback === "function") {
+            errorCallback("Error creating new cart: " + event.target.error);
+          }
+        };
+      }
+    };
+
+    request.onerror = function (event) {
+      if (typeof errorCallback === "function") {
+        errorCallback("Error fetching cart: " + event.target.error);
+      }
+    };
+  },
 };
 
-// Predefined list of products
 const predefinedProducts = [
   {
     id: "1",
@@ -170,5 +238,4 @@ const predefinedProducts = [
   },
 ];
 
-// Initialize the database only once
 DB.initialize(predefinedProducts);
