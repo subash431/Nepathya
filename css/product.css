@@ -11,11 +11,11 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
+  margin: 50px 0px;
   flex-wrap: wrap;
 }
 .products__main {
-  /* border: 1px solid #ff9c40; */
-  background-color: #f4f2f1;
+  border: 1px solid #f4f2f1;
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -37,22 +37,29 @@
   gap: 1rem;
 }
 .product__main--text > h2 {
-  font-size: 2.3rem;
+  font-size: 1.6rem;
 }
 .product__main--text > p {
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
 .product__rating > i {
-  color: #ff8e25;
+  color: var(--primary);
   font-size: 1.5rem;
 }
-.product__section > h1 {
+.product__section > div > h1 {
+  font-family: "Dancing Script", cursive;
   font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0px;
+  text-align: center;
 }
-.product__section > h1 > span {
-  font-size: 3rem;
+.product__section > div > h2 {
+  font-size: 2rem;
+  text-align: center;
 }
 .product__main--img > img {
-  height: 20rem;
+  height: 200px;
+  object-fit: contain;
+  width: 300px !important;
   width: auto;
 }

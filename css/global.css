@@ -11,6 +11,36 @@
   list-style: none;
 }
 
+/* Loader */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff63;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  user-select: none;
+  justify-content: center;
+}
+
+.loader > i {
+  font-size: 50px;
+  color: var(--primary);
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Scrollbar */
 
 ::-webkit-scrollbar-corner {
