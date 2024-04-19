@@ -11,6 +11,33 @@
   list-style: none;
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scroll-bar-bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bar-color);
+  border-radius: 20px;
+  border: 3px solid var(--scroll-bar-bg-color);
+}
+
 /* Toast box */
 .toast-box {
   position: fixed;
@@ -95,6 +122,10 @@ form {
 .p-btn {
   padding: 10px 20px;
   border: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
   font-size: 16px;
   background-color: var(--primary);
   cursor: pointer;
