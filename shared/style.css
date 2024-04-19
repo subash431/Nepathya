@@ -116,6 +116,8 @@
   cursor: pointer;
 }
 .footer > p {
+  border-top: 1px solid #e4e4e4;
+  padding-top: 20px;
   width: 85%;
   margin: auto;
   text-align: center;
