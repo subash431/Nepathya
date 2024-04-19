@@ -1,6 +1,7 @@
 function checkUser() {
   const user = localStorage.getItem("user") ?? null;
   if (user) {
+    window.location.href = "index.html";
   }
 }
 
@@ -12,7 +13,7 @@ function login() {
   DB.login(username, password, function (user) {
     if (user) {
       // User logged in successfully
-      localStorage.setItem("user", user);
+      localStorage.setItem("user", JSON.stringify(user));
       showToast("s", "Successfully logged in.");
       setTimeout(() => {
         // Take you to the home page.
@@ -32,12 +33,12 @@ function signup() {
   var email = document.getElementById("email").value;
   var result = DB.signup(username, email, password);
   if (result) {
-    showToast("s", "Successfully logged in.");
+    showToast("s", "Successfully register as a user.");
     setTimeout(() => {
-      // Take you to the home page.
-      window.location.href = "index.html";
+      // Take you to the login page.
+      window.location.href = "login.html";
     }, 1000);
   } else {
-    showToast("e", "Sorry, user with this credentials doesn't exist.");
+    showToast("e", "Sorry, some error occured while registering.");
   }
 }

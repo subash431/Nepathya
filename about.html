@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Allan's Pastry Shop Pvt. Ltd.</title>
     <link rel="icon" type="image/x-icon" href="img/logo.png" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./about.css" />
-    <link rel="stylesheet" href="./shared/style.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- Navigation bar starts -->
@@ -31,7 +31,7 @@
                 ><i class="fa-solid fa-cart-shopping"></i>Cart
               </a>
             </li>
-            <li><a href="index.html">Login</a></li>
+            <li><a href="index.html" id="userAccount">Login</a></li>
           </ul>
         </div>
       </nav>
@@ -135,15 +135,14 @@
       />
     </div>
 
-    <!-- Footer Section -->
-
-    <div class="footer__section">
-      <div class="footer__main">
-        <div class="footer__logo">
-          <img src="../img/logo.png" alt="" />
+    <!-- Footer section starts -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-logo">
+          <img src="./img/logo.png" />
           <p>
-            lorem lorem lorem lorem <br />
-            loremlorem lorem
+            Your satisfaction is <br />
+            our priority
           </p>
         </div>
         <div class="footer-product">
@@ -185,7 +184,7 @@
           </ul>
         </div>
         <div class="follow">
-          <button class="btn hero-btn">Follow Us</button>
+          <button class="p-btn outline full">Follow Us</button>
           <div class="social_media">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-instagram"></i>
@@ -195,6 +194,9 @@
         </div>
       </div>
       <p>&copy; Copyright Reserved @ Allan's pastry Shop Pvt.Ltd-2024</p>
-    </div>
+    </footer>
+    <!-- End of footer  -->
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

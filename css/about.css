@@ -28,7 +28,7 @@
   width: 39%;
 }
 .image1 img {
-  height: 80%;
+  height: 100%;
   width: 100%;
   border-radius: 20px;
 }
@@ -57,15 +57,17 @@
 }
 
 .timetext {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  color: rgb(73, 73, 73);
+  font-weight: 300;
   text-align: justify;
   padding: 0 20px;
 }
 
 .heading_text {
-  font-weight: bolder;
+  font-weight: 600;
   font-size: 29px;
+  color: black;
   padding: 10px 0px;
 }
 
@@ -93,12 +95,10 @@
   display: flex;
   border-radius: 20px;
   justify-content: space-around;
-
   position: relative;
-  width: 80%;
-  margin: auto;
+  width: 85%;
   background: black;
-  margin-bottom: 50px !important;
+  margin: 100px auto !important;
 }
 .lastimage img {
   height: 500px;

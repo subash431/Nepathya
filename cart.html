@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | Allan's Pastry Shop Pvt. Ltd.</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+  </head>
+  <body>
+    <!-- Navigation bar starts -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="left-navbar">
+          <img height="90px" src="./img/logo.png" alt="logo" />
+          <span class="divider">|</span>
+          <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./About/About.html">About</a></li>
+            <li><a href="./product/product.html">Product</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="./Contact/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="right-navbar">
+          <ul class="nav-items">
+            <li>
+              <a href="index.html"
+                ><i class="fa-solid fa-cart-shopping"></i>Cart
+                <span id="cartItemCount"></span>
+              </a>
+            </li>
+            <li><a href="index.html" id="userAccount">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Navigation bar ends -->
+
+    <section class="cart-section">
+      <div>
+        <h1>Your Cart</h1>
+        <h2>Checkout anytime</h2>
+      </div>
+
+      <div class="cart-container">
+        <div id="cartItems" class="cart-items"></div>
+        <div class="line"></div>
+        <div class="cart-summary">
+          <h1 class="total-summary">TOTAL SUMMARY</h1>
+          <div class="summary-item">
+            <h2>Subtotal</h2>
+            <span>CAD$143.32</span>
+          </div>
+          <div class="summary-item">
+            <h2>Shipping</h2>
+            <span>CAD$143.32</span>
+          </div>
+          <div class="summary-item">
+            <h2>Tax</h2>
+            <span>CAD$143.32</span>
+          </div>
+          <div class="summary-item">
+            <h2>Service charge</h2>
+            <span>CAD$143.32</span>
+          </div>
+          <button class="checkout-button p-btn">Checkout</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="loader" class="loader">
+      <i class="fa-solid fa-spinner"></i>
+    </div>
+    <!-- Footer section starts -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-logo">
+          <img src="./img/logo.png" />
+          <p>
+            Your satisfaction is <br />
+            our priority
+          </p>
+        </div>
+        <div class="footer-product">
+          <h1>Product</h1>
+          <ul>
+            <li><a href="#">Universal patty</a></li>
+            <li><a href="#">Plantain Tart</a></li>
+            <li><a href="#">Turnover</a></li>
+            <li><a href="#">Breads</a></li>
+            <li><a href="#">Bulla</a></li>
+          </ul>
+        </div>
+        <div class="footer-product">
+          <h1>About</h1>
+          <ul>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Teams</a></li>
+            <li><a href="#">Our Culture</a></li>
+          </ul>
+        </div>
+        <div class="footer-product">
+          <h1>Company</h1>
+          <ul>
+            <li><a href="#">Condition</a></li>
+            <li><a href="#">Open A Shop</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Technology</a></li>
+          </ul>
+        </div>
+        <div class="footer-product">
+          <h1>Supports</h1>
+          <ul>
+            <li><a href="#">Getting Started</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Reports A Blog</a></li>
+            <li><a href="#">Bulla</a></li>
+          </ul>
+        </div>
+        <div class="follow">
+          <button class="p-btn outline full">Follow Us</button>
+          <div class="social_media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <p>&copy; Copyright Reserved @ Allan's pastry Shop Pvt.Ltd-2024</p>
+    </footer>
+    <!-- End of footer  -->
+
+    <!-- Toasts -->
+    <div id="success-toast" class="toast-box success">
+      <i class="fas fa-check-circle"></i><span id="success-toast-text"></span>
+    </div>
+    <div id="error-toast" class="toast-box error">
+      <i class="fas fa-times-circle"></i> <span id="error-toast-text"></span>
+    </div>
+    <!-- End Toasts -->
+    <script src="./js/db.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/cart.js"></script>
+  </body>
+</html>

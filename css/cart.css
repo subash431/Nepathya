@@ -1,0 +1,101 @@
+h1 {
+  font-size: 18px;
+}
+
+.cart-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.cart-section > div > h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0px;
+  text-align: center;
+}
+.cart-section > div > h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cart-container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: start;
+  margin-bottom: 100px;
+}
+
+.cart-items {
+  width: 70%;
+  border-right: 2px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 30px;
+}
+
+.cart-summary {
+  width: 30%;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-item {
+  display: flex;
+  gap: 30px;
+}
+
+.product-image {
+  object-fit: contain;
+  border-radius: 20px;
+  height: 100px;
+  width: 100px;
+}
+
+.product-details {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.quantity-button {
+  border: none;
+  background: none;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-button {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.total-summary {
+  font-size: 22px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(235, 235, 235);
+}
