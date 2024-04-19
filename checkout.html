@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkout page.</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/colors.css" />
+  </head>
+  <style>
+    body {
+      background-color: rgb(245, 248, 250);
+    }
+    .checkout_page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      width: auto;
+      gap: 2rem;
+
+      margin: 6rem 20rem;
+      padding: 5rem 10rem;
+    }
+    .check-out-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .check-out-text > h1 {
+      color: green;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .check-out-text > p {
+      font-size: 1rem;
+      text-align: center;
+    }
+    .checkout_page > i {
+      color: rgb(138, 243, 138);
+      font-size: 6rem;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="left-navbar">
+          <img height="90px" src="./img/logo.png" alt="logo" />
+          <span class="divider">|</span>
+          <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="right-navbar">
+          <ul class="nav-items">
+            <li>
+              <a class="cursor-pointer" onclick="gotoCart()"
+                ><i class="fa-solid fa-cart-shopping"></i>Cart
+                <span id="cartItemCount"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="cursor-pointer"
+                onclick="loginButtonClicked()"
+                id="userAccount"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="checkout_page">
+      <i class="fa-regular fa-circle-check"></i>
+      <div class="check-out-text">
+        <h1>Order Successful</h1>
+        <p>Thank you so much for your order</p>
+      </div>
+      <button class="p-btn" onclick="back()">Back to home</button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-logo">
+          <img src="./img/logo.png" />
+          <p>
+            Your satisfaction is <br />
+            our priority
+          </p>
+        </div>
+        <div class="footer-product">
+          <h1>Product</h1>
+          <ul>
+            <li><a href="#">Universal patty</a></li>
+            <li><a href="#">Plantain Tart</a></li>
+            <li><a href="#">Turnover</a></li>
+            <li><a href="#">Breads</a></li>
+            <li><a href="#">Bulla</a></li>
+          </ul>
+        </div>
+        <div class="footer-product">
+          <h1>About</h1>
+          <ul>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Teams</a></li>
+            <li><a href="#">Our Culture</a></li>
+          </ul>
+        </div>
+        <div class="footer-product">
+          <h1>Company</h1>
+          <ul>
+            <li><a href="#">Condition</a></li>
+            <li><a href="#">Open A Shop</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Technology</a></li>
+          </ul>
+        </div>
+        <div class="footer-product">
+          <h1>Supports</h1>
+          <ul>
+            <li><a href="#">Getting Started</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Reports A Blog</a></li>
+            <li><a href="#">Bulla</a></li>
+          </ul>
+        </div>
+        <div class="follow">
+          <button class="p-btn outline full">Follow Us</button>
+          <div class="social_media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <p>&copy; Copyright Reserved @ Allan's pastry Shop Pvt.Ltd-2024</p>
+    </footer>
+
+    <script src="./js/checkout.js"></script>
+  </body>
+</html>
