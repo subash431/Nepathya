@@ -11,7 +11,9 @@ function checkUser() {
     const jsonUser = JSON.parse(luser);
     user = jsonUser;
     const userIcon = document.getElementById("userAccount");
-    userIcon.innerHTML = jsonUser.username;
+    userIcon.innerHTML = `
+    <i class="fa-solid fa-right-from-bracket"></i>
+    ${jsonUser.username}`;
     userIcon.style.fontWeight = 700;
     userIcon.style.borderBottom = "2px solid white";
 
@@ -21,6 +23,26 @@ function checkUser() {
         cartItemCount.innerText = `(${callback})`;
       }
     });
+  }
+}
+
+function gotoCart() {
+  if (user == null) {
+    showToast("e", "You have to login to see your cart.");
+    return;
+  } else {
+    window.location.href = "cart.html";
+  }
+}
+
+function loginButtonClicked() {
+  if (user != null) {
+    showToast("s", "You have been logged out successfully.");
+    localStorage.removeItem("user");
+    window.location.reload();
+    return;
+  } else {
+    window.location.href = "login.html";
   }
 }
 
