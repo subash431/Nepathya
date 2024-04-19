@@ -185,7 +185,7 @@
 
 .image_section--left {
   width: 40%;
-  background-image: url("./img/white-bread.webp");
+  background-image: url("../img/white-bread.webp");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -233,7 +233,7 @@
 }
 .second-left {
   width: 60%;
-  background-image: url("./img/patty.jpg");
+  background-image: url("../img/patty.jpg");
 }
 .second-right {
   width: 40%;
