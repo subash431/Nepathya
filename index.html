@@ -1,446 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Allan's Pastry Shop Pvt.Ltd</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./shared/style.css" />
-    <link rel="stylesheet" href="./About/About.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="navbar">
-        <div class="left__navbar">
-          <div class="logo">
-            <img src="./img/logo.png" alt="logo" />
-          </div>
-          <div class="line">
-            <p>|</p>
-          </div>
 
-          <div class="nav_lists">
-            <ul id="MenuItems" >
-              <li><a href="index.html">Home</a></li>
-              <li><a href="./About/About.html">About</a></li>
-              <li><a href="./product/product.html">Product</a></li>
-              
-              <li><a href="order.html">Order</a></li>
-              <li><a href="./Contact/contact.html">Contact</a></li>
-            </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Allan's Pastry Shop Pvt. Ltd.</title>
+  <link rel="icon" type="image/x-icon" href="img/logo.png" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./shared/style.css" />
+</head>
+
+<body>
+  <!-- Navigation bar starts -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="left-navbar">
+        <img height="90px" src="./img/logo.png" alt="logo" /> <span class="divider">|</span>
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="right-navbar">
+        <ul class="nav-items">
+          <li><a href="index.html"><i class="fa-solid fa-cart-shopping"></i>Cart </a></li>
+          <li><a href="index.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Navigation bar ends -->
+
+  <!-- Hero section -->
+  <section class="hero__section">
+    <div class="hero__section--left">
+      <h1>
+        Welcome To <br />
+        Our <span class="title-text"> Allan's</span> <br />
+        Shop
+      </h1>
+      <p>
+        Discover a vibrant taste of Jamaica with a shop that specializes in
+        authentic Jamaican beef patties like spicy, mild, chicken, and goat
+        patties, complemented <br />by an assortment of freshly baked breads.
+        It’s a culinary hub where the rich flavors of the Caribbean are
+        celebrated in every bite. 🍞🥟
+      </p>
+      <button class="p-btn rounded">Check Our Menu</button>
+    </div>
+    <div class="hero__section--right">
+      <img src="./img/bg.webp" alt="Animated Image" />
+    </div>
+  </section>
+  <!-- End hero section -->
+
+  <!-- Category section -->
+  <section class="category__section">
+    <div class="category__section--top">
+      <h3>Which one</h3>
+      <h1>Shop By Category</h1>
+    </div>
+    <div class="category__section--left">
+      <div class="category__top">
+        <div class="border">
+          <div class="category__img">
+            <img src="./img/dish/mild.webp" alt="" />
+          </div>
+          <hr />
+          <div class="category__text">
+            <h3>Spicy Patty</h3>
+            <p>
+
+              Spicy patties are savory pastries filled with a flavorful mixture of seasoned meat, often beef or chicken,
+              and spices. Encased in a golden, flaky crust, they offer a satisfying combination of heat and rich taste.
+              Popular in various cultures, these handheld delights are perfect for a quick meal or snack on the go.
+            </p>
+            <button class="category-btn">Browse Shop</button>
           </div>
         </div>
-        <div class="right__navbar">
-          <div class="search">
-            <p>Search</p>
-
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="border">
+          <div class="category__img">
+            <img src="./img/dish/coco-bread.jpg" alt="" />
           </div>
-          <div class="cart">
-            <button class="btn">
-              <p>Cart(0)</p>
-               <i class="fa-solid fa-cart-shopping"></i>
+          <hr />
+          <div class="category__text">
+            <h3>Coco Breads</h3>
+            <p>
+
+              Coco bread is a soft and slightly sweet bread popular in Caribbean cuisine, especially in Jamaica. It's
+              often served alongside spicy patties or used to make sandwiches. Made with coconut milk, this bread has a
+              unique flavor and a pillowy texture that pairs wonderfully with a variety of fillings and. Its versatility
+              and delicious taste make it a beloved choice for many seeking meal.
+            </p>
+            <button class="category-btn">Browse Shop</button>
+          </div>
+        </div>
+        <div class="border">
+          <div class="category__img">
+            <img src="./img/dish/bulla.jpg" alt="" />
+          </div>
+          <hr />
+          <div class="category__text">
+            <h3>Coconut Bulla</h3>
+            <p>
+              Coconut bulla is a traditional Jamaican sweet treat made with coconut and spices. It has a delightful
+              crunch on the outside and a moist, flavorful center.These delicious treats are often enjoyed with a cup of
+              tea or coffee. Their unique texture and tropical flavor make them a beloved snack in Jamaican cuisine.
+            </p>
+            <button class="category-btn">Browse Shop</button>
+          </div>
+        </div>
+        <div class="border">
+          <div class="category__img">
+            <img src="./img/dish/turnover.jpg" alt="" />
+          </div>
+          <hr />
+          <div class="category__text">
+            <h3>Turnover</h3>
+            <p>
+
+              Turnovers are versatile treats that can be filled with fruits like apples, berries, or savory fillings
+              like cheese and vegetables. Their flaky pastry crust gives them a satisfying crunch, while the filling
+              provides a burst of flavor. Whether enjoyed warm or at room temperature, turnovers are a favorite snack
+              for many, perfect for any time of day.
+            </p>
+            <button class="category-btn">
+              Browse Shop <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
-          <div class="menu-icon" onclick="menutoggle()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          
         </div>
-      </nav>
-    </header>
-    <!-- starting hero section -->
-    <section class="hero__section">
-      <div class="hero__section--left">
-        <h1>
-          Welcome To <br />
-          Our <span> Allan's</span> <br />
-          Shop
-        </h1>
-        <p>
-          Discover a vibrant taste of Jamaica with a shop that specializes in
-          authentic Jamaican beef patties like spicy, mild, chicken, and goat
-          patties, complemented <br />by an assortment of freshly baked breads.
-          It’s a culinary hub where the rich flavors of the Caribbean are
-          celebrated in every bite. 🍞🥟
-        </p>
-        <button class="btn hero-btn">Check Our Menu</button>
       </div>
-      <div class="hero__section--right">
-        <img src="./img/bg.webp" alt="Animated Image" class="" />
-      </div>
-    </section>
+    </div>
+  </section>
+  <!-- End category section -->
 
-    <section class="category__section">
-      <div class="category__section--top">
-        <h3>Which one</h3>
-        <h1>Shop By Category</h1>
+  <!-- Items section -->
+  <section class="items__section">
+    <div class="items__section--main">
+      <div class="items__section--top">
+        <h3>Best Seller</h3>
+        <h1>Best Seller This Week!</h1>
       </div>
-      <div class="category__section--left">
-        <div class="category__top">
-          <div class="border">
-            <div class="category__img">
-              <img src="./img/dish/mild.webp" alt="" />
-            </div>
-            <hr />
-            <div class="category__text">
-              <h3>Spicy Patty</h3>
-              <p>
-               
-Spicy patties are savory pastries filled with a flavorful mixture of seasoned meat, often beef or chicken, and spices. Encased in a golden, flaky crust, they offer a satisfying combination of heat and rich taste. Popular in various cultures, these handheld delights are perfect for a quick meal or snack on the go. 
-              </p>
-              <button class="category-btn">Browse Shop</button>
-            </div>
-          </div>
-          <div class="border">
-            <div class="category__img">
-              <img src="./img/dish/coco-bread.jpg" alt="" />
-            </div>
-            <hr />
-            <div class="category__text">
-              <h3>Coco Breads</h3>
-              <p>
-                
-Coco bread is a soft and slightly sweet bread popular in Caribbean cuisine, especially in Jamaica. It's often served alongside spicy patties or used to make sandwiches. Made with coconut milk, this bread has a unique flavor and a pillowy texture that pairs wonderfully with a variety of fillings and. Its versatility and delicious taste make it a beloved choice for many seeking meal.
-              </p>
-              <button class="category-btn">Browse Shop</button>
-            </div>
-          </div>
-          <div class="border">
-            <div class="category__img">
-              <img src="./img/dish/bulla.jpg" alt="" />
-            </div>
-            <hr />
-            <div class="category__text">
-              <h3>Coconut Bulla</h3>
-              <p>
-                Coconut bulla is a traditional Jamaican sweet treat made with coconut and spices. It has a delightful crunch on the outside and a moist, flavorful center.These delicious treats are often enjoyed with a cup of tea or coffee. Their unique texture and tropical flavor make them a beloved snack in Jamaican cuisine.
-              </p>
-              <button class="category-btn">Browse Shop</button>
-            </div>
-          </div>
-          <div class="border">
-            <div class="category__img">
-              <img src="./img/dish/turnover.jpg" alt="" />
-            </div>
-            <hr />
-            <div class="category__text">
-              <h3>Turnover</h3>
-              <p>
-                
-Turnovers are versatile treats that can be filled with fruits like apples, berries, or savory fillings like cheese and vegetables. Their flaky pastry crust gives them a satisfying crunch, while the filling provides a burst of flavor. Whether enjoyed warm or at room temperature, turnovers are a favorite snack for many, perfect for any time of day.
-              </p>
-              <button class="category-btn">
-                Browse Shop <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
+      <div class="items__flex">
+        <div class="items__section--down">
+          <img src="./img/dish/plantaintart.jpg" alt="" />
+          <button class="item-btn">Plantaintart</button>
+        </div>
+        <div class="items__section--down">
+          <img src="./img/dish/spicy.jpg" alt="" />
+          <button class="item-btn">Spicy Patty</button>
+        </div>
+        <div class="items__section--down">
+          <img src="./img/dish/spicy.jpg" alt="" />
+          <button class="item-btn">Whole Wheat Bread</button>
+        </div>
+        <div class="items__section--down">
+          <img src="./img/dish/ester-bun.jpeg" alt="" />
+          <button class="item-btn">Ester Bun</button>
+        </div>
+        <div class="items__section--down">
+          <img src="./img/white-bread.webp" alt="" />
+          <button class="item-btn">White Hardo Bread</button>
+        </div>
+        <div class="items__section--down">
+          <img src="./img/dish/coco-bread.jpg" alt="" />
+          <button class="item-btn">Coco Breads</button>
         </div>
       </div>
-    </section>
-    <!-- end of category section -->
-    <section class="items__section">
-      <div class="items__section--main">
-        <div class="items__section--top">
-          <h3>Best Seller</h3>
-          <h1>Best Seller This Week!</h1>
-        </div>
-        <div class="items__flex">
-          <div class="items__section--down">
-            <img src="./img/dish/plantaintart.jpg" alt="" />
-            <button class="item-btn">Plantaintart</button>
-          </div>
-          <div class="items__section--down">
-            <img src="./img/dish/spicy.jpg" alt="" />
-            <button class="item-btn">Spicy Patty</button>
-          </div>
-          <div class="items__section--down">
-            <img src="./img/dish/spicy.jpg" alt="" />
-            <button class="item-btn">Whole Wheat Bread</button>
-          </div>
-          <div class="items__section--down">
-            <img src="./img/dish/ester-bun.jpeg" alt="" />
-            <button class="item-btn">Ester Bun</button>
-          </div>
-          <div class="items__section--down">
-            <img src="./img/white-bread.webp" alt="" />
-            <button class="item-btn">White Hardo Bread</button>
-          </div>
-          <div class="items__section--down">
-            <img src="./img/dish/coco-bread.jpg" alt="" />
-            <button class="item-btn">Coco Breads</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- image section  -->
-    <section class="image__section">
-      <div class="image_section--left">
-        <div class="image_section--left-pad"></div>
-      </div>
-      <div class="image_section--right">
-        <h3>White Hardo Bread</h3>
-        <p>
-          Unique Bread For Lovers Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Perferendis officia qui nesciunt, dolorum expedita
-          magnam veniam, tenetur cumque nulla dolore tempore laborum iste
-          incidunt reiciendis eligendi quos repellat dolores veritatis? Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa eum
-          eligendi quia assumenda, praesentium asperiores corrupti adipisci
-          ipsum, expedita quaerat odit nulla atque totam voluptas aliquid illo
-          necessitatibus quae. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Nostrum, voluptatem sed alias veritatis dolores
-          voluptatum tempora. Cumque debitis dicta expedita, voluptate vitae
-          molestiae delectus, impedit recusandae sed quidem cum eaque. Lorem
-          ipsum dolor sit, amet consectetur adipisicing elit. Nostrum sed fugiat
-          excepturi praesentium sapiente laboriosam molestias modi enim labore!
-          Iure dolorum aliquam alias voluptatem iste natus, soluta qui eveniet
-          et?
-        </p>
-        <button class="category-btn">
-          Shop now <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-    </section>
-    <section class="image__section second-image-section">
-      <div class="image_section--right second-right">
-        <h3>Jamaican Beef Patties</h3>
-        <p>
-          These Jamaican Beef Patties feature a delicious and flavorful beef
-          filling covered with a perfectly flaky pastry with that classic yellow
-          color! Not only are they incredibly tasty in every bite, but they’re
-          also super easy to make and always look impressive! Jamaican beef
-          patties are delectable pastries filled with seasoned ground beef,
-          encased in a flaky, golden crust. The pastry, made with flour,
-          turmeric, salt, and butter, yields a buttery and vibrant casing.
-          Meanwhile, the filling, cooked with onions, garlic, spices, and ground
-          beef, bursts with Caribbean flavors like curry, thyme, and paprika.
-          After assembly, the patties are baked until golden brown, resulting in
-          a savory snack or meal enjoyed for its bold taste and comforting
-          texture, embodying the rich culinary heritage of Jamaica.
-        </p>
-        <button class="category-btn">
-          Shop now <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-      <div class="image_section--left second-left">
-        <div class="image_section--left-pad"></div>
-      </div>
-    </section>
+    </div>
+  </section>
+  <!-- End items section -->
 
-    <!-- Menu section  -->
+  <!-- Images section  -->
+  <section class="image__section">
+    <div class="image_section--left">
+      <div class="image_section--left-pad"></div>
+    </div>
+    <div class="image_section--right">
+      <h3>White Hardo Bread</h3>
+      <p>
+        Unique Bread For Lovers Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Perferendis officia qui nesciunt, dolorum expedita
+        magnam veniam, tenetur cumque nulla dolore tempore laborum iste
+        incidunt reiciendis eligendi quos repellat dolores veritatis? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa eum
+        eligendi quia assumenda, praesentium asperiores corrupti adipisci
+        ipsum, expedita quaerat odit nulla atque totam voluptas aliquid illo
+        necessitatibus quae. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Nostrum, voluptatem sed alias veritatis dolores
+        voluptatum tempora. Cumque debitis dicta expedita, voluptate vitae
+        molestiae delectus, impedit recusandae sed quidem cum eaque. Lorem
+        ipsum dolor sit, amet consectetur adipisicing elit. Nostrum sed fugiat
+        excepturi praesentium sapiente laboriosam molestias modi enim labore!
+        Iure dolorum aliquam alias voluptatem iste natus, soluta qui eveniet
+        et?
+      </p>
+      <button class="category-btn">
+        Shop now <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
 
-    <!-- start of testimonial section -->
-    <section class="testimonial__section">
-      <div class="testimonial__section--main">
-        <div class="testimonial__section--top">
-          <h1>Testimonial</h1>
-          <p>We Care About Our Customers Experience Too</p>
+  <section class="image__section second-image-section">
+    <div class="image_section--right second-right">
+      <h3>Jamaican Beef Patties</h3>
+      <p>
+        These Jamaican Beef Patties feature a delicious and flavorful beef
+        filling covered with a perfectly flaky pastry with that classic yellow
+        color! Not only are they incredibly tasty in every bite, but they’re
+        also super easy to make and always look impressive! Jamaican beef
+        patties are delectable pastries filled with seasoned ground beef,
+        encased in a flaky, golden crust. The pastry, made with flour,
+        turmeric, salt, and butter, yields a buttery and vibrant casing.
+        Meanwhile, the filling, cooked with onions, garlic, spices, and ground
+        beef, bursts with Caribbean flavors like curry, thyme, and paprika.
+        After assembly, the patties are baked until golden brown, resulting in
+        a savory snack or meal enjoyed for its bold taste and comforting
+        texture, embodying the rich culinary heritage of Jamaica.
+      </p>
+      <button class="category-btn">
+        Shop now <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+    <div class="image_section--left second-left">
+      <div class="image_section--left-pad"></div>
+    </div>
+  </section>
+  <!-- End images section -->
+
+  <!-- Testimonial section -->
+  <section class="testimonial__section">
+    <div class="testimonial__section--main">
+      <div class="testimonial__section--top">
+        <h1>Testimonial</h1>
+        <p>We Care About Our Customers Experience Too</p>
+      </div>
+      <div class="testimonial__section--down">
+        <div class="testimonial_section--box">
+          <div class="testimonial__img1">
+            <img src="./img/person.jpg" alt="" />
+          </div>
+          <p>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            quas? Quia, harum dignissimos. Ipsa laudantium ea vero, quidem
+            dolorem temporibus quibusdam sapiente pariatur cum natus iusto,
+            suscipit molestiae dolores eaque."
+          </p>
+          <h1>
+            <span class="testimonial">Subash Pariyar </span>Co-Founder of XYZ
+          </h1>
+
         </div>
-        <div class="testimonial__section--down">
-          <div class="testimonial_section--box">
-            <div class="testimonial__img1">
-              <img src="./img/person.jpg" alt="" />
-            </div>
-            <p>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              quas? Quia, harum dignissimos. Ipsa laudantium ea vero, quidem
-              dolorem temporibus quibusdam sapiente pariatur cum natus iusto,
-              suscipit molestiae dolores eaque."
-            </p>
-            <h1>
-              <span class="testimonial">Subash Pariyar </span>Co-Founder of XYZ
-            </h1>
-           
+        <div class="testimonial_section--box">
+          <div class="testimonial__img1">
+            <img src="./img/person.jpg" alt="" />
           </div>
-          <div class="testimonial_section--box">
-            <div class="testimonial__img1">
-              <img src="./img/person.jpg" alt="" />
-            </div>
-            <p>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              quas? Quia, harum dignissimos. Ipsa laudantium ea vero, quidem
-              dolorem temporibus quibusdam sapiente pariatur cum natus iusto,
-              suscipit molestiae dolores eaque."
-            </p>
-            <h1>
-              <span class="testimonial">Subash Pariyar </span>Co-Founder of XYZ
-            </h1>
-            
+          <p>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            quas? Quia, harum dignissimos. Ipsa laudantium ea vero, quidem
+            dolorem temporibus quibusdam sapiente pariatur cum natus iusto,
+            suscipit molestiae dolores eaque."
+          </p>
+          <h1>
+            <span class="testimonial">Subash Pariyar </span>Co-Founder of XYZ
+          </h1>
+
+        </div>
+        <div class="testimonial_section--box">
+          <div class="testimonial__img1">
+            <img src="./img/person.jpg" alt="" />
           </div>
-          <div class="testimonial_section--box">
-            <div class="testimonial__img1">
-              <img src="./img/person.jpg" alt="" />
-            </div>
-            <p>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              quas? Quia, harum dignissimos. Ipsa laudantium ea vero, quidem
-              dolorem temporibus quibusdam sapiente pariatur cum natus iusto,
-              suscipit molestiae dolores eaque."
-            </p>
-            <h1>
-              <span class="testimonial">Subash Pariyar </span>Co-Founder of XYZ
-            </h1>
-            
-          </div>
+          <p>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            quas? Quia, harum dignissimos. Ipsa laudantium ea vero, quidem
+            dolorem temporibus quibusdam sapiente pariatur cum natus iusto,
+            suscipit molestiae dolores eaque."
+          </p>
+          <h1>
+            <span class="testimonial">Subash Pariyar </span>Co-Founder of XYZ
+          </h1>
+
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <!-- End of testimonial section -->
 
-    <section class="contact__section">
-      <div class="contact__section--main">
-        <h1>Feel Free To <span>Contact</span>  Us Anytime</h1>
-        <div class="form__controller">
+  <!-- Contact section -->
+  <section class="contact__section">
+    <div class="contact__section--main">
+      <h1>Feel Free To <span>Contact</span> Us Anytime</h1>
+      <div class="form__controller">
 
-        
+
         <div class="contact__section--left">
           <h2>Contact Us</h2>
-    <form action="#" method="post">
-        <!-- Full Name and Email Address in Inline Format -->
-        <div class="inline_input">
-          <div class="input-group">
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
-        </div>
-        <div class="input-group">
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+          <form action="#" method="post">
+            <!-- Full Name and Email Address in Inline Format -->
+            <div class="inline_input">
+              <div class="input-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+              </div>
+              <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
 
-        </div>
-        
-        <!-- Subject and Message Fields -->
-        <div class="input-group input_subject">
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
-        </div>
-        <div class="input-group input_subject">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <!-- Send Message Button -->
-        <div class="input-group">
-            <input class="btn category-btn" type="submit" value="Send Message">
-        </div>
+            </div>
 
-        
+            <!-- Subject and Message Fields -->
+            <div class="input-group input_subject">
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="input-group input_subject">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <!-- Send Message Button -->
+            <div class="input-group">
+              <input class="btn category-btn" type="submit" value="Send Message">
+            </div>
+
+
 
         </div>
         <div class="contact__form--map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5757.350197527975!2d-79.30796222433348!3d43.821098241556236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d3f632713f6f%3A0x76e8c9da46a9cf30!2s3447%20Kennedy%20Rd%2C%20Scarborough%2C%20ON%20M1V%203S1!5e0!3m2!1sen!2sca!4v1712983627913!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5757.350197527975!2d-79.30796222433348!3d43.821098241556236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d3f632713f6f%3A0x76e8c9da46a9cf30!2s3447%20Kennedy%20Rd%2C%20Scarborough%2C%20ON%20M1V%203S1!5e0!3m2!1sen!2sca!4v1712983627913!5m2!1sen!2sca"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
       </div>
-        
-      </div>
-    </section>
-    <div class="contact__icon">
-      <div class="icon_main">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Address: 3447 Kannedy Road</p>
-      </div>
-      <div class="icon_main">
-        <i class="fa-solid fa-envelope"></i>
-        <p>Email: allanpastryshop.com</p>
-      </div>
-      <div class="icon_main">
-        <i class="fa-solid fa-envelope"></i>
-        <p>Email: allanpastryshop.com</p>
-      </div>
-      <div class="icon_main">
-        <i class="fa-solid fa-globe"></i>
-        <p>Visit: 3447 Kannedy Road</p>
-      </div>
-      <div class="icon_main">
-        <i class="fa-solid fa-globe"></i>
-        <p>Visit: 3447 Kannedy Road</p>
-      </div>
-      
+
     </div>
+  </section>
+  <!-- End of contact section -->
 
-    <div class="footer__section">
-      <div class="footer__main">
-        <div class="footer__logo">
-          <img src="./img/logo.png" alt="" />
-          <p>
-            lorem lorem lorem lorem <br />
-            loremlorem lorem
-          </p>
-        </div>
-        <div class="footer-product">
-          <h1>Product</h1>
-          <ul>
-            <li><a href="#">Universal patty</a></li>
-            <li><a href="#">Plantain Tart</a></li>
-            <li><a href="#">Turnover</a></li>
-            <li><a href="#">Breads</a></li>
-            <li><a href="#">Bulla</a></li>
-          </ul>
-        </div>
-        <div class="footer-product">
-          <h1>About</h1>
-          <ul>
-            <li><a href="#">Our Mission</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Our Teams</a></li>
-            <li><a href="#">Our Culture</a></li>
-          </ul>
-        </div>
-        <div class="footer-product">
-          <h1>Company</h1>
-          <ul>
-            <li><a href="#">Condition</a></li>
-            <li><a href="#">Open A Shop</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Technology</a></li>
-          </ul>
-        </div>
-        <div class="footer-product">
-          <h1>Supports</h1>
-          <ul>
-            <li><a href="#">Getting Started</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Reports A Blog</a></li>
-            <li><a href="#">Bulla</a></li>
-          </ul>
-        </div>
-        <div class="follow">
-          <button class="btn hero-btn">Follow Us</button>
-          <div class="social_media">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-youtube"></i>
-          </div>
+
+  <!-- Contact icons section -->
+  <div class="contact__icon">
+    <div class="icon_main">
+      <i class="fa-solid fa-location-dot"></i>
+      <p>Address: 3447 Kannedy Road</p>
+    </div>
+    <div class="icon_main">
+      <i class="fa-solid fa-envelope"></i>
+      <p>Email: allanpastryshop.com</p>
+    </div>
+    <div class="icon_main">
+      <i class="fa-solid fa-envelope"></i>
+      <p>Email: allanpastryshop.com</p>
+    </div>
+    <div class="icon_main">
+      <i class="fa-solid fa-globe"></i>
+      <p>Visit: 3447 Kannedy Road</p>
+    </div>
+    <div class="icon_main">
+      <i class="fa-solid fa-globe"></i>
+      <p>Visit: 3447 Kannedy Road</p>
+    </div>
+  </div>
+  <!-- End of contact icons section -->
+
+
+  <!-- Footer section starts -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-logo">
+        <img src="./img/logo.png"  />
+        <p>
+          Your satisfaction is  <br />
+          our priority
+        </p>
+      </div>
+      <div class="footer-product">
+        <h1>Product</h1>
+        <ul>
+          <li><a href="#">Universal patty</a></li>
+          <li><a href="#">Plantain Tart</a></li>
+          <li><a href="#">Turnover</a></li>
+          <li><a href="#">Breads</a></li>
+          <li><a href="#">Bulla</a></li>
+        </ul>
+      </div>
+      <div class="footer-product">
+        <h1>About</h1>
+        <ul>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Our Teams</a></li>
+          <li><a href="#">Our Culture</a></li>
+        </ul>
+      </div>
+      <div class="footer-product">
+        <h1>Company</h1>
+        <ul>
+          <li><a href="#">Condition</a></li>
+          <li><a href="#">Open A Shop</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-product">
+        <h1>Supports</h1>
+        <ul>
+          <li><a href="#">Getting Started</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Reports A Blog</a></li>
+          <li><a href="#">Bulla</a></li>
+        </ul>
+      </div>
+      <div class="follow">
+        <button class="btn hero-btn">Follow Us</button>
+        <div class="social_media">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
         </div>
       </div>
-      <p>&copy; Copyright Reserved @ Allan's pastry Shop Pvt.Ltd-2024</p>
     </div>
-    <script>
-        var MenuItems = document.getElementById("MenuItems");
+    <p>&copy; Copyright Reserved @ Allan's pastry Shop Pvt.Ltd-2024</p>
+  </div>
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
 
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "200px";
+      }
+      else {
         MenuItems.style.maxHeight = "0px";
-        function menutoggle() {
-            if (MenuItems.style.maxHeight == "0px") {
-                MenuItems.style.maxHeight = "200px";
-            }
-            else {
-                MenuItems.style.maxHeight = "0px";
 
-            }
+      }
 
 
-        }
+    }
 
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
