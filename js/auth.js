@@ -31,14 +31,15 @@ function signup() {
   var password = document.getElementById("password").value;
   var confirmpassword = document.getElementById("confirmpassword").value;
   var email = document.getElementById("email").value;
-  var result = DB.signup(username, email, password);
-  if (result) {
-    showToast("s", "Successfully register as a user.");
-    setTimeout(() => {
-      // Take you to the login page.
-      window.location.href = "login.html";
-    }, 1000);
-  } else {
-    showToast("e", "Sorry, some error occured while registering.");
-  }
+  DB.signup(username, email, password, function (callback) {
+    if (callback) {
+      showToast("s", "Successfully register as a user.");
+      setTimeout(() => {
+        // Take you to the login page.
+        window.location.href = "login.html";
+      }, 1000);
+    } else {
+      showToast("e", "Sorry, some error occured while registering.");
+    }
+  });
 }
