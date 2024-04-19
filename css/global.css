@@ -178,6 +178,36 @@ form {
   border: 1px solid var(--primary);
 }
 
+.p-btn.icon {
+  height: 30px;
+  width: 30px;
+  padding: 0px;
+}
+
+.p-btn.error {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(143, 42, 42);
+  padding: 0px;
+}
+
+.p-btn.error.outline {
+  height: 30px;
+  width: 30px;
+  color: rgb(143, 42, 42);
+  background-color: white;
+  border: 1px solid rgb(143, 42, 42);
+  padding: 0px;
+}
+
+.p-btn.error:hover {
+  height: 30px;
+  width: 30px;
+  color: white;
+  background-color: rgb(130, 27, 27);
+  padding: 0px;
+}
+
 .p-btn:hover {
   color: white;
   background-color: var(--primary-hover);
