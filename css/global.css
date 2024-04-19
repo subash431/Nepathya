@@ -11,6 +11,9 @@
   list-style: none;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
 /* Loader */
 
 .loader {

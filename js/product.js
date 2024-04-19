@@ -42,6 +42,10 @@ function populateProduct() {
 }
 
 function addToCart(productId) {
+  if (user == null) {
+    showToast("e", "You have to login to add products");
+    return;
+  }
   DB.addToCart(
     user.username,
     productId,
