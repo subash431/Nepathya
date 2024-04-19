@@ -1,133 +1,135 @@
-body {
-    
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 18px;
-}
-
 .contact-container {
-    display: flex;
-    justify-content:center;
-    align-items: flex-start;
-    padding: 50px;
-    gap: 7%;
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  width: 85%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-container > div {
+  width: 100%;
+}
+
+.detail-numbers {
+  display: flex;
+  margin: 20px 0px;
+  justify-content: space-between;
+}
+
+.detail-numbers a {
+  text-align: center;
+  width: 33%;
+  font-weight: 400;
+}
+
+.contact-container > div > h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0px;
+  text-align: center;
+}
+.contact-container > div > h2 {
+  font-size: 2rem;
+  text-align: center;
 }
 
 .contact-form {
-
-       flex: 1.5;
-
-    
+  width: 50%;
+  margin-top: 100px !important;
+  margin: auto;
 }
 
-.contact-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
+.contact-form > h3 {
+  text-align: start;
+  margin-bottom: 20px;
+  font-size: 26px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    background: NONE;
-    border-bottom: 0.5px solid rgb(67, 67, 67) !important;
-    gap: 10PX;
-    font-size: 18px;
+  width: 100%;
+  padding-bottom: 15px;
+  border: none;
+  background: none;
+  border-bottom: 0.5px solid rgb(67, 67, 67) !important;
+  gap: 10px;
+  font-size: 18px;
+  outline: none;
 }
 
 .form-group textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .contact-form button[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    background-color: #ff8e25;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(var(--primary), var(--primary-hover));
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
 }
 
 .contact-form button[type="submit"]:hover {
-    background-color: #8d4d12;
+  background-color: var(--primary-hover);
 }
 
 .map {
-    flex: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 50rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 50px !important;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 50rem;
 }
 
 .map iframe {
-    width: 80%;
-    height: 100%;
-    border: none;
+  width: 100%;
 }
-.map h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+.map h3 {
+  text-align: start;
+  margin-bottom: 20px;
+  font-size: 26px;
 }
 
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        padding: 20px;
-    }
+  .contact-container {
+    flex-direction: column;
+    padding: 20px;
+  }
 
-    .contact-form,
-    .map {
-        flex: 1;
-        width: 100%;
-    }
+  .contact-form,
+  .map {
+    flex: 1;
+    width: 100%;
+  }
 
-    .map {
-        height: 300px; /* Adjust height for smaller screens */
-    }
+  .map {
+    height: 300px; /* Adjust height for smaller screens */
+  }
 
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group textarea {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
 
-    .contact-form button[type="submit"] {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
+  .contact-form button[type="submit"] {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
 }
-
-
