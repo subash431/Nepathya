@@ -1,6 +1,7 @@
 function checkUser() {
   const user = localStorage.getItem("user") ?? null;
   if (user) {
+    window.location.href = "index.html";
   }
 }
 
@@ -12,7 +13,7 @@ function login() {
   DB.login(username, password, function (user) {
     if (user) {
       // User logged in successfully
-      localStorage.setItem("user", user);
+      localStorage.setItem("user", JSON.stringify(user));
       showToast("s", "Successfully logged in.");
       setTimeout(() => {
         // Take you to the home page.
