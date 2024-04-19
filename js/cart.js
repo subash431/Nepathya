@@ -27,20 +27,23 @@ function populateCart() {
           <div class="product-info">
             <h1 class="product-name">${item.product.name}</h1>
             <p class="product-quantity">Quantity: ${item.quantity}</p>
-            <p class="product-total">Price: ${item.product.price} | Total: ${
-          item.quantity * item.product.price
-        }</p>
+            <p class="product-total">Price: ${
+              item.product.price
+            } | Total: ${parseFloat(item.quantity * item.product.price).toFixed(
+          2
+        )}</p>
           </div>
           <div class="product-controls">
+          <button  onclick="removeFromCart(${
+            item.product.id
+          })" class="p-btn icon outline error rounded decrease">
+            -
+          </button>
+            <h1 class="quantity">${item.quantity}</h1>
             <button onclick="addToCart(${
               item.product.id
             })" class="p-btn icon outline rounded increase">+</button>
-            <h1 class="quantity">${item.quantity}</h1>
-            <button  onclick="removeFromCart(${
-              item.product.id
-            })" class="p-btn icon outline error rounded decrease">
-              -
-            </button>
+            
           </div>
         </div>`;
         cartList.append(product);
