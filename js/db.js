@@ -131,6 +131,99 @@ const DB = {
     };
   },
 
+  cartItemCount: function (username, callback) {
+    const transaction = this.db.transaction(["carts"], "readonly");
+    const cartObjectStore = transaction.objectStore("carts");
+    const request = cartObjectStore.get(username);
+
+    request.onsuccess = function (event) {
+      const cart = event.target.result;
+      if (cart) {
+        let itemCount = 0;
+        cart.products.forEach(function (product) {
+          itemCount += product.quantity;
+        });
+        callback(itemCount);
+      } else {
+        // Cart doesn't exist for the username
+        callback(null);
+      }
+    };
+
+    request.onerror = function (event) {
+      console.error("Error fetching cart:", event.target.error);
+      callback(null);
+    };
+  },
+
+  getItemQuantityInCart: function (username, productId, callback) {
+    const transaction = this.db.transaction(["carts"], "readonly");
+    const cartObjectStore = transaction.objectStore("carts");
+    const request = cartObjectStore.get(username);
+
+    request.onsuccess = function (event) {
+      const cart = event.target.result;
+      if (cart) {
+        const product = cart.products.find((p) => p.productId === productId);
+        if (product) {
+          callback(product.quantity);
+        } else {
+          // Product not found in cart
+          callback(0);
+        }
+      } else {
+        // Cart doesn't exist for the username
+        callback(0);
+      }
+    };
+
+    request.onerror = function (event) {
+      console.error("Error fetching cart:", event.target.error);
+      callback(null);
+    };
+  },
+
+  getCartItemsByUsername: function (username, callback) {
+    const transaction = this.db.transaction(["carts"], "readonly");
+    const cartObjectStore = transaction.objectStore("carts");
+    const request = cartObjectStore.get(username);
+
+    request.onsuccess = function (event) {
+      console.log(event.target.result);
+      const cart = event.target.result;
+      if (cart) {
+        // Fetch product details for each item in the cart
+        const productDetails = [];
+        const productTransaction = DB.db.transaction(["products"], "readonly");
+        const productObjectStore = productTransaction.objectStore("products");
+        cart.products.forEach(function (item) {
+          const productRequest = productObjectStore.get(
+            item.productId.toString()
+          );
+          productRequest.onsuccess = function (event) {
+            const product = event.target.result;
+            console.log(product);
+            if (product) {
+              productDetails.push({ product, quantity: item.quantity });
+            }
+          };
+        });
+        // Wait for all product requests to complete
+        productTransaction.oncomplete = function () {
+          callback(productDetails);
+        };
+      } else {
+        // Cart doesn't exist for the username
+        callback([]);
+      }
+    };
+
+    request.onerror = function (event) {
+      console.error("Error fetching cart:", event.target.error);
+      callback(null);
+    };
+  },
+
   addToCart: function (username, productId, successCallback, errorCallback) {
     const transaction = this.db.transaction(["carts"], "readwrite");
     const cartObjectStore = transaction.objectStore("carts");
