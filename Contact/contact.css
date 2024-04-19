@@ -102,6 +102,32 @@ footer {
     padding: 20px 0;
 }
 
-footer p {
-    margin: 0;
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-form,
+    .map {
+        flex: 1;
+        width: 100%;
+    }
+
+    .map {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .contact-form button[type="submit"] {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
 }
+
+
