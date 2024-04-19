@@ -1,0 +1,151 @@
+.aboutus {
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  margin-top: 50px;
+  color: #ff8e25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ourstory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+.main__div {
+  padding: 20px;
+  position: relative;
+}
+.top {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+.image1 {
+  width: 39%;
+}
+.image1 img {
+  height: 80%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.description1 {
+  width: 50%;
+  display: flex;
+}
+
+.line_div {
+  width: 70px;
+  background-color: #ff8e25;
+  height: 7px;
+  border-radius: 2px;
+}
+
+.main__line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timelinetext {
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+.timetext {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.heading_text {
+  font-weight: bolder;
+  font-size: 29px;
+  padding: 10px 0px;
+}
+
+.top:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.top:nth-child(even) .main__line {
+  flex-direction: row-reverse;
+}
+.top:nth-child(even) .description1 {
+  flex-direction: row-reverse;
+}
+.vertical-line {
+  background-color: #ff8e25;
+  height: 90%;
+  width: 7px;
+  position: absolute;
+  border-radius: 5px;
+  left: 50%;
+  top: 50px;
+}
+
+.lastimage {
+  display: flex;
+  border-radius: 20px;
+  justify-content: space-around;
+
+  position: relative;
+  width: 80%;
+  margin: auto;
+  background: black;
+  margin-bottom: 50px !important;
+}
+.lastimage img {
+  height: 500px;
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+.image_text {
+  position: absolute;
+  font-size: 60px;
+  top: 200px;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+}
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
+  .aboutus,
+  .ourstory {
+    font-size: 40px;
+  }
+
+  .top {
+    flex-direction: column !important;
+    padding: 10px;
+  }
+
+  .image1,
+  .description1 {
+    width: 100%;
+  }
+
+  .lastimage img {
+    height: auto;
+  }
+
+  .image_text {
+    font-size: 40px;
+    top: 150px;
+  }
+  .vertical-line {
+    display: none;
+  }
+  .line_div {
+    display: none;
+  }
+  .timelinetext {
+    display: none;
+  }
+}
