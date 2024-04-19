@@ -66,7 +66,7 @@
 .category__section--top > h3,
 .items__section--top > h3 {
   font-size: 3rem;
-  color: #ff8e25;
+  color: var(--primary);
   font-family: "Dancing Script", cursive;
 }
 .category__section--top > h1,
@@ -176,8 +176,8 @@
 .image__section {
   display: flex;
   width: 85%;
-  margin-top: 100px;
-  margin: auto;
+  margin: 100px auto;
+  margin-bottom: 0px !important;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
@@ -241,18 +241,15 @@
 
 /* Testimonial section  */
 .testimonial__section {
-  margin: 10rem;
-  padding-top: 5rem;
-
-  /* background-color: azure; */
+  width: 85%;
+  margin: auto;
 }
 .testimonial__section--main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 15rem;
-  /* margin: 10rem; */
+  gap: 80px;
   margin-bottom: 3rem;
 }
 .testimonial__section--top {
@@ -263,49 +260,52 @@
   gap: 1rem;
 }
 .testimonial__section--top > h1 {
-  font-size: 2.5rem;
-  color: #ff8e25;
+  font-size: 3rem;
+  color: var(--primary);
+  font-family: "Dancing Script", cursive;
 }
 .testimonial__section--top > p {
-  font-size: 1.9rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 .testimonial__section--down {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-direction: column; */
   gap: 2rem;
 }
+
 .testimonial_section--box {
   position: relative;
-  background-color: #efefef;
   width: 30%;
-  padding: 5.5rem 3rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
-  box-shadow: 1px 1px 5px #888888;
+  gap: 20px;
 }
 .testimonial {
   font-size: 1.8rem;
 }
 .testimonial_section--box > p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   line-height: 25px;
 }
 .testimonial_section--box > h1 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 
+.testimonial__img1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .testimonial__img1 > img {
-  position: absolute;
-  top: -9rem;
-  left: 14rem;
+  width: 100%;
+  object-fit: cover;
   height: 12rem;
   width: 12rem;
   border-radius: 50rem;
@@ -318,21 +318,31 @@
   align-items: flex-start;
   justify-content: center;
   gap: 10rem;
-  margin: 5rem;
+  margin: 80px 0px;
+  border-top: 2px solid rgba(67, 67, 67, 0.055);
+  margin-top: 10%;
+  padding-top: 80px;
 }
 .icon_main {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  font-weight: 500;
+  color: rgb(67, 67, 67);
   flex-direction: column;
 }
 .icon_main > i {
   font-size: 2rem;
-  background-color: #ff8e25;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.034);
   padding: 1rem;
   border-radius: 5rem;
-  color: white;
+  color: var(--primary);
 }
 .icon_main > p {
   font-size: 1.3rem;
