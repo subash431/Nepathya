@@ -113,6 +113,11 @@
     padding: 20px;
   }
 
+  .detail-numbers{
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
   .contact-form,
   .map {
     flex: 1;
