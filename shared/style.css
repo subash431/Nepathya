@@ -20,7 +20,7 @@
   align-items: center;
 }
 .divider {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -32,7 +32,6 @@
 }
 .nav-items > li > a {
   color: white;
-  font-size: 1.2rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -53,21 +52,20 @@
 /************************************* */
 .footer {
   background-color: azure;
-  padding: 10rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 30px 0px;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 30px;
 }
 .footer-main {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-right: 3rem;
+  width: 85%;
+  margin: auto;
 }
 .footer-logo > img {
-  height: 70px;
+  height: 100px;
   width: auto;
   cursor: pointer;
 }
@@ -79,10 +77,10 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 15px;
 }
 .footer-product > h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .footer-product > ul {
   display: flex;
@@ -90,14 +88,13 @@
   justify-content: center;
   flex-direction: column;
   list-style: none;
-  gap: 1.5rem;
+  gap: 10px;
 }
 .footer-product > ul > li {
   list-style: none;
 }
 .footer-product > ul > li > a {
   text-decoration: none;
-  font-size: 1.3rem;
   color: black;
 }
 .follow {
@@ -105,22 +102,22 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 20px;
 }
 .social_media {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  gap: 2rem;
+  gap: 20px;
 }
 .social_media > i {
   font-size: 20px;
   color: #ff8e25;
   cursor: pointer;
 }
-.footer-section > p {
-  font-size: 1.2rem;
+.footer > p {
+  width: 85%;
+  margin: auto;
   text-align: center;
   color: #888888;
 }
