@@ -26,11 +26,12 @@
           <div class="line">
             <p>|</p>
           </div>
+
           <div class="nav_lists">
-            <ul>
+            <ul id="MenuItems" >
               <li><a href="index.html">Home</a></li>
               <li><a href="./About/About.html">About</a></li>
-              <li><a href="product.html">Product</a></li>
+              <li><a href="./product/product.html">Product</a></li>
               
               <li><a href="order.html">Order</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -45,15 +46,14 @@
           </div>
           <div class="cart">
             <button class="btn">
-              Cart(0) <i class="fa-solid fa-cart-shopping"></i>
+              <p>Cart(0)</p>
+               <i class="fa-solid fa-cart-shopping"></i>
             </button>
           </div>
-          <!-- Hamburger Menu -->
-          <div class="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+          <div class="menu-icon" onclick="menutoggle()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          
         </div>
       </nav>
     </header>
@@ -163,7 +163,7 @@ Turnovers are versatile treats that can be filled with fruits like apples, berri
             <button class="item-btn">Spicy Patty</button>
           </div>
           <div class="items__section--down">
-            <img src="./img/dish/Whole-Wheat-Bread.jpg" alt="" />
+            <img src="./img/dish/spicy.jpg" alt="" />
             <button class="item-btn">Whole Wheat Bread</button>
           </div>
           <div class="items__section--down">
@@ -425,6 +425,22 @@ Turnovers are versatile treats that can be filled with fruits like apples, berri
       </div>
       <p>&copy; Copyright Reserved @ Allan's pastry Shop Pvt.Ltd-2024</p>
     </div>
-    
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+
+            }
+
+
+        }
+
+    </script>
   </body>
 </html>

@@ -63,6 +63,18 @@
   justify-content: center;
   gap: 1rem;
 }
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn > i {
+  font-size: 1.5rem;
+  color: white;
+}
+.btn > p {
+  font-size: 1.5rem;
+}
 
 .search > i {
   font-size: 1.5rem;
