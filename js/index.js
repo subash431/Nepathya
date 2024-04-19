@@ -1,4 +1,9 @@
 var user = null;
+
+DB.onInitialized(function () {
+  checkUser();
+});
+
 function checkUser() {
   const luser = localStorage.getItem("user") ?? null;
   if (luser) {
@@ -10,11 +15,14 @@ function checkUser() {
     userIcon.style.fontWeight = 700;
     userIcon.style.borderBottom = "2px solid white";
 
-    updateCartCount();
+    DB.cartItemCount(user.username, function (callback) {
+      console.log(callback);
+      if (callback != null) {
+        cartItemCount.innerText = `(${callback})`;
+      }
+    });
   }
 }
-
-checkUser();
 
 function showToast(type, message) {
   if (type == "e") {
