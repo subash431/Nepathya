@@ -73,7 +73,7 @@ const DB = {
     }
   },
 
-  signup: function (username, email, password) {
+  signup: function (username, email, password, callback) {
     const transaction = this.db.transaction(["users"], "readwrite");
     const userObjectStore = transaction.objectStore("users");
     const user = { username, email, password };
@@ -81,9 +81,12 @@ const DB = {
 
     request.onsuccess = function (event) {
       console.log("User signed up successfully:", username);
+      callback(true);
     };
 
     request.onerror = function (event) {
+      callback(false);
+
       console.error("Error signing up user:", event.target.error);
     };
   },
@@ -277,7 +280,7 @@ const DB = {
         const addRequest = cartObjectStore.add(newCart);
         addRequest.onsuccess = function (event) {
           if (typeof successCallback === "function") {
-            successCallback("New cart created with product: " + productId);
+            successCallback("New product added to cart successfully.");
           }
         };
         addRequest.onerror = function (event) {
@@ -285,6 +288,66 @@ const DB = {
             errorCallback("Error creating new cart: " + event.target.error);
           }
         };
+      }
+    };
+
+    request.onerror = function (event) {
+      if (typeof errorCallback === "function") {
+        errorCallback("Error fetching cart: " + event.target.error);
+      }
+    };
+  },
+
+  removeFromCart: function (
+    username,
+    productId,
+    successCallback,
+    errorCallback
+  ) {
+    const transaction = this.db.transaction(["carts"], "readwrite");
+    const cartObjectStore = transaction.objectStore("carts");
+    const request = cartObjectStore.get(username);
+
+    request.onsuccess = function (event) {
+      const cart = event.target.result;
+      if (cart) {
+        // Cart exists, find the product index in the cart
+        const productIndex = cart.products.findIndex(
+          (product) => product.productId === productId
+        );
+        if (productIndex !== -1) {
+          // Product found in the cart, decrement its quantity
+          const product = cart.products[productIndex];
+          product.quantity--;
+          if (product.quantity === 0) {
+            // Remove the product from the cart if its quantity becomes zero
+            cart.products.splice(productIndex, 1);
+          }
+          // Update the cart in the database
+          const updateRequest = cartObjectStore.put(cart);
+          updateRequest.onsuccess = function (event) {
+            if (typeof successCallback === "function") {
+              successCallback("Product removed from cart successfully.");
+            }
+          };
+          updateRequest.onerror = function (event) {
+            if (typeof errorCallback === "function") {
+              errorCallback(
+                "Error removing product from cart: " + event.target.error
+              );
+            }
+          };
+        } else {
+          // Product not found in the cart
+          if (typeof successCallback === "function") {
+            successCallback("Product not found in the cart.");
+          }
+        }
+      } else {
+        // Cart doesn't exist
+        if (typeof successCallback === "function") {
+          successCallback("Cart not found for user: " + username);
+        }
       }
     };
 
