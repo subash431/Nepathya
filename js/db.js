@@ -159,33 +159,6 @@ const DB = {
     };
   },
 
-  getItemQuantityInCart: function (username, productId, callback) {
-    const transaction = this.db.transaction(["carts"], "readonly");
-    const cartObjectStore = transaction.objectStore("carts");
-    const request = cartObjectStore.get(username);
-
-    request.onsuccess = function (event) {
-      const cart = event.target.result;
-      if (cart) {
-        const product = cart.products.find((p) => p.productId === productId);
-        if (product) {
-          callback(product.quantity);
-        } else {
-          // Product not found in cart
-          callback(0);
-        }
-      } else {
-        // Cart doesn't exist for the username
-        callback(0);
-      }
-    };
-
-    request.onerror = function (event) {
-      console.error("Error fetching cart:", event.target.error);
-      callback(null);
-    };
-  },
-
   getCartItemsByUsername: function (username, callback) {
     const transaction = this.db.transaction(["carts"], "readonly");
     const cartObjectStore = transaction.objectStore("carts");
@@ -357,6 +330,24 @@ const DB = {
       }
     };
   },
+
+  deleteCart: function (username, successCallback, errorCallback) {
+    const transaction = this.db.transaction(["carts"], "readwrite");
+    const cartObjectStore = transaction.objectStore("carts");
+    const request = cartObjectStore.delete(username);
+
+    request.onsuccess = function (event) {
+      if (typeof successCallback === "function") {
+        successCallback("Cart deleted successfully for user: " + username);
+      }
+    };
+
+    request.onerror = function (event) {
+      if (typeof errorCallback === "function") {
+        errorCallback("Error deleting cart: " + event.target.error);
+      }
+    };
+  },
 };
 
 const predefinedProducts = [
@@ -364,7 +355,7 @@ const predefinedProducts = [
     id: "1",
     name: "Spicy Patty",
     image: "product1.jpg",
-    price: 22.00,
+    price: 22.0,
     rate: 4,
     description: "Description 1",
   },
