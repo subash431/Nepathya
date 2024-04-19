@@ -44,9 +44,9 @@ h1 {
 .cart-summary {
   width: 30%;
   padding-left: 30px;
-  display: flex;
   flex-direction: column;
   gap: 10px;
+  display: none;
 }
 
 .product-item {

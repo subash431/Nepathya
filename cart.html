@@ -49,23 +49,27 @@
       <div class="cart-container">
         <div id="cartItems" class="cart-items"></div>
         <div class="line"></div>
-        <div class="cart-summary">
-          <h1 class="total-summary">TOTAL SUMMARY</h1>
+        <div id="cartSummary" class="cart-summary">
+          <h1 class="total-summary">CART SUMMARY</h1>
           <div class="summary-item">
             <h2>Subtotal</h2>
-            <span>CAD$143.32</span>
+            <span id="subTotalPrice"></span>
           </div>
           <div class="summary-item">
             <h2>Shipping</h2>
-            <span>CAD$143.32</span>
+            <span>CAD $50</span>
           </div>
           <div class="summary-item">
             <h2>Tax</h2>
-            <span>CAD$143.32</span>
+            <span id="totalTax"></span>
           </div>
           <div class="summary-item">
             <h2>Service charge</h2>
-            <span>CAD$143.32</span>
+            <span id="serviceCharge"></span>
+          </div>
+          <div class="summary-item">
+            <h2>Total Amount</h2>
+            <span id="finalAmount"></span>
           </div>
           <button class="checkout-button p-btn">Checkout</button>
         </div>
