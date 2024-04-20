@@ -18,7 +18,7 @@
         <div class="left-navbar">
           <img height="90px" src="./img/logo.png" alt="logo" />
           <span class="divider">|</span>
-          <ul class="nav-items">
+          <ul class="nav-items" id="MenuItems">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="product.html">Product</a></li>
@@ -45,6 +45,9 @@
           </ul>
         </div>
       </nav>
+      <div class="hamburger" onclick="menutoggle()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
     <!-- Navigation bar ends -->
 
@@ -403,22 +406,17 @@
 
     <script src="./js/db.js"></script>
     <script src="./js/index.js"></script>
-    <!-- <script>
-    var MenuItems = document.getElementById("MenuItems");
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
 
-    MenuItems.style.maxHeight = "0px";
-    function menutoggle() {
-      if (MenuItems.style.maxHeight == "0px") {
-        MenuItems.style.maxHeight = "200px";
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
       }
-      else {
-        MenuItems.style.maxHeight = "0px";
-
-      }
-
-
-    }
-
-  </script> -->
+    </script>
   </body>
 </html>
