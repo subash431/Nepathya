@@ -99,3 +99,33 @@ h1 {
   padding-bottom: 20px;
   border-bottom: 2px solid rgb(235, 235, 235);
 }
+@media only screen and (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-items {
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .cart-summary {
+    width: 100%;
+    padding-left: 0;
+    display: block;
+  }
+
+  .cart-section > div > h2 {
+    margin-bottom: 20px;
+  }
+  .product-name{
+    font-size: 15px;
+    margin-right: 10px;
+      }
+    .product-quantity, .product-total{
+      font-size: 12px;
+    }
+}

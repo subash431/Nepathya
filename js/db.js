@@ -159,33 +159,6 @@ const DB = {
     };
   },
 
-  getItemQuantityInCart: function (username, productId, callback) {
-    const transaction = this.db.transaction(["carts"], "readonly");
-    const cartObjectStore = transaction.objectStore("carts");
-    const request = cartObjectStore.get(username);
-
-    request.onsuccess = function (event) {
-      const cart = event.target.result;
-      if (cart) {
-        const product = cart.products.find((p) => p.productId === productId);
-        if (product) {
-          callback(product.quantity);
-        } else {
-          // Product not found in cart
-          callback(0);
-        }
-      } else {
-        // Cart doesn't exist for the username
-        callback(0);
-      }
-    };
-
-    request.onerror = function (event) {
-      console.error("Error fetching cart:", event.target.error);
-      callback(null);
-    };
-  },
-
   getCartItemsByUsername: function (username, callback) {
     const transaction = this.db.transaction(["carts"], "readonly");
     const cartObjectStore = transaction.objectStore("carts");
@@ -357,40 +330,99 @@ const DB = {
       }
     };
   },
+
+  deleteCart: function (username, successCallback, errorCallback) {
+    const transaction = this.db.transaction(["carts"], "readwrite");
+    const cartObjectStore = transaction.objectStore("carts");
+    const request = cartObjectStore.delete(username);
+
+    request.onsuccess = function (event) {
+      if (typeof successCallback === "function") {
+        successCallback("Cart deleted successfully for user: " + username);
+      }
+    };
+
+    request.onerror = function (event) {
+      if (typeof errorCallback === "function") {
+        errorCallback("Error deleting cart: " + event.target.error);
+      }
+    };
+  },
 };
 
 const predefinedProducts = [
   {
     id: "1",
-    name: "Product 1",
+    name: "Spicy Patty",
     image: "product1.jpg",
-    price: 10.99,
+    price: 22.0,
     rate: 4,
     description: "Description 1",
   },
   {
     id: "2",
-    name: "Product 2",
+    name: "TurnOver ",
     image: "product2.jpg",
-    price: 20.99,
+    price: 3.5,
     rate: 5,
     description: "Description 2",
   },
   {
     id: "3",
-    name: "Product 3",
+    name: "White Hardo",
     image: "product3.jpg",
-    price: 15.99,
+    price: 4.5,
     rate: 3,
     description: "Description 3",
   },
   {
     id: "4",
-    name: "Product 4",
+    name: "Chicken Patty",
     image: "product4.jpg",
-    price: 14.5,
+    price: 20.5,
     rate: 5,
     description: "Description 4",
+  },
+  {
+    id: "5",
+    name: "Plantain Tart",
+    image: "product5.png",
+    price: 3.5,
+    rate: 5,
+    description: "Description 5",
+  },
+
+  {
+    id: "6",
+    name: "Bulla",
+    image: "product6.webp",
+    price: 4.5,
+    rate: 4.5,
+    description: "Description 6",
+  },
+  {
+    id: "7",
+    name: "Coconut razada",
+    image: "product7.jpg",
+    price: 2.5,
+    rate: 4,
+    description: "Description 7",
+  },
+  {
+    id: "8",
+    name: "Soft Bread",
+    image: "product8.jpg",
+    price: 1.5,
+    rate: 4.5,
+    description: "Description 8",
+  },
+  {
+    id: "9",
+    name: "PegBread",
+    image: "product9.jpeg",
+    price: 1.9,
+    rate: 3.9,
+    description: "Description 9",
   },
 ];
 

@@ -137,7 +137,8 @@
 
   .image_text {
     font-size: 40px;
-    top: 150px;
+    top: 20px;
+    left: 20px;
   }
   .vertical-line {
     display: none;

@@ -9,6 +9,7 @@
   gap: 20px;
   background-size: cover;
   background-position: center;
+  -webkit-overflow-scrolling: touch;
 }
 
 .contact-container > div {
@@ -57,9 +58,12 @@
 
 .form-group input[type="text"],
 .form-group input[type="email"],
-.form-group textarea {
+.form-group textarea,
+.form-group input[type="date"],
+.form-group input[type="url"] {
   width: 100%;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
   border: none;
   background: none;
   border-bottom: 0.5px solid rgb(67, 67, 67) !important;
@@ -71,17 +75,47 @@
 .form-group textarea {
   resize: vertical;
 }
+.form-group label {
+  color: grey;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border: none;
+  background: none;
+  gap: 10px;
+  font-size: 18px;
+  outline: none;
+}
+form-group input[type="url"] pla {
+  color: grey;
+}
 
 .contact-form button[type="submit"] {
-  width: 100%;
+  width: 20%;
   padding: 15px;
-  background: linear-gradient(var(--primary), var(--primary-hover));
+  background-color: Var(--primary);
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 18px;
+}
+.contact-form button[type="reset"] {
+  width: 20%;
+  padding: 15px;
+
+  color: var(--primary);
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.contact-form button[type="reset"]:hover {
+  background: #ff9800;
+  color: white;
 }
 
 .contact-form button[type="submit"]:hover {
@@ -95,6 +129,10 @@
   border-radius: 10px;
   overflow: hidden;
   height: 50rem;
+}
+.contact_buttons {
+  display: flex;
+  gap: 50px;
 }
 
 .map iframe {
@@ -113,6 +151,11 @@
     padding: 20px;
   }
 
+  .detail-numbers {
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
   .contact-form,
   .map {
     flex: 1;
