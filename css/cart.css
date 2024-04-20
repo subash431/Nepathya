@@ -115,17 +115,21 @@ h1 {
   .cart-summary {
     width: 100%;
     padding-left: 0;
-    display: block;
   }
 
   .cart-section > div > h2 {
     margin-bottom: 20px;
   }
-  .product-name{
+  .product-details {
+    gap: 5px;
+    flex-direction: column;
+  }
+  .product-name {
     font-size: 15px;
     margin-right: 10px;
-      }
-    .product-quantity, .product-total{
-      font-size: 12px;
-    }
+  }
+  .product-quantity,
+  .product-total {
+    font-size: 12px;
+  }
 }
