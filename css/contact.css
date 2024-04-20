@@ -9,6 +9,7 @@
   gap: 20px;
   background-size: cover;
   background-position: center;
+  -webkit-overflow-scrolling: touch;
 }
 
 .contact-container > div {
@@ -56,8 +57,10 @@
 }
 
 .form-group input[type="text"],
-.form-group input[type="email"],.form-group textarea, .form-group input[type="date"],
-.form-group input[type="url"]{
+.form-group input[type="email"],
+.form-group textarea,
+.form-group input[type="date"],
+.form-group input[type="url"] {
   width: 100%;
   padding-bottom: 5px;
   margin-bottom: 10px;
@@ -71,11 +74,8 @@
 
 .form-group textarea {
   resize: vertical;
- 
 }
-.form-group label 
-
-{
+.form-group label {
   color: grey;
   padding-bottom: 5px;
   margin-bottom: 10px;
@@ -85,7 +85,7 @@
   font-size: 18px;
   outline: none;
 }
-form-group input[type="url"] pla{
+form-group input[type="url"] pla {
   color: grey;
 }
 
@@ -103,7 +103,7 @@ form-group input[type="url"] pla{
 .contact-form button[type="reset"] {
   width: 20%;
   padding: 15px;
-  
+
   color: var(--primary);
   background-color: #fff;
   border: 1px solid var(--primary);
@@ -113,14 +113,13 @@ form-group input[type="url"] pla{
   font-size: 18px;
 }
 
-.contact-form button[type="reset"]:hover{
+.contact-form button[type="reset"]:hover {
   background: #ff9800;
   color: white;
 }
 
 .contact-form button[type="submit"]:hover {
-  background-color: 
-  var(--primary-hover) 
+  background-color: var(--primary-hover);
 }
 
 .map {
@@ -131,8 +130,10 @@ form-group input[type="url"] pla{
   overflow: hidden;
   height: 50rem;
 }
-.contact_buttons{display: flex;
-gap: 50px;}
+.contact_buttons {
+  display: flex;
+  gap: 50px;
+}
 
 .map iframe {
   width: 100%;
@@ -150,7 +151,7 @@ gap: 50px;}
     padding: 20px;
   }
 
-  .detail-numbers{
+  .detail-numbers {
     flex-direction: column;
     gap: 20px;
     text-align: left;
