@@ -17,37 +17,45 @@
         <div class="left-navbar">
           <img height="90px" src="./img/logo.png" alt="logo" />
           <span class="divider">|</span>
-          <ul class="nav-items">
+          <ul class="nav-items" id="MenuItems">
             <li><a href="index.html">Home</a></li>
-            <li><a href="./About/About.html">About</a></li>
-            <li><a href="./product/product.html">Product</a></li>
-            <li><a href="order.html">Order</a></li>
-            <li><a href="./Contact/contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Product</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="right-navbar">
           <ul class="nav-items">
             <li>
-              <a href="index.html"
+              <a class="cursor-pointer" onclick="gotoCart()"
                 ><i class="fa-solid fa-cart-shopping"></i>Cart
                 <span id="cartItemCount"></span>
               </a>
             </li>
-            <li><a href="index.html" id="userAccount">Login</a></li>
+            <li>
+              <a
+                class="cursor-pointer"
+                onclick="loginButtonClicked()"
+                id="userAccount"
+                >Login</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
+      <div class="hamburger" onclick="menutoggle()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
     <!-- Navigation bar ends -->
     <section class="product__section">
-      <div >
+      <div>
         <h1>Our Products</h1>
-        <h2>Available product</h1>
+        <h2>Available product</h2>
       </div>
-      
-      <div id="productsList" class="product__main--items">
 
-      </div>
+      <div id="productsList" class="product__main--items"></div>
     </section>
 
     <div id="loader" class="loader">
@@ -66,11 +74,11 @@
         <div class="footer-product">
           <h1>Product</h1>
           <ul>
-            <li><a href="#">Universal patty</a></li>
-            <li><a href="#">Plantain Tart</a></li>
-            <li><a href="#">Turnover</a></li>
-            <li><a href="#">Breads</a></li>
-            <li><a href="#">Bulla</a></li>
+            <li><a href="./product.html">Universal patty</a></li>
+            <li><a href="./product.html">Plantain Tart</a></li>
+            <li><a href="./product.html">Turnover</a></li>
+            <li><a href="./product.html">Breads</a></li>
+            <li><a href="./product.html">Bulla</a></li>
           </ul>
         </div>
         <div class="footer-product">
@@ -86,7 +94,7 @@
           <h1>Company</h1>
           <ul>
             <li><a href="#">Condition</a></li>
-            <li><a href="#">Open A Shop</a></li>
+            <li><a href="./product.html"> Shop</a></li>
             <li><a href="#">Terms</a></li>
             <li><a href="#">Technology</a></li>
           </ul>
@@ -94,10 +102,10 @@
         <div class="footer-product">
           <h1>Supports</h1>
           <ul>
-            <li><a href="#">Getting Started</a></li>
+            <li><a href="#">tarted</a></li>
             <li><a href="#">Help Center</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Reports A Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
             <li><a href="#">Bulla</a></li>
           </ul>
         </div>
@@ -115,14 +123,14 @@
     </footer>
     <!-- End of footer  -->
 
-        <!-- Toasts -->
-        <div id="success-toast" class="toast-box success">
-          <i class="fas fa-check-circle"></i><span id="success-toast-text"></span>
-        </div>
-        <div id="error-toast" class="toast-box error">
-          <i class="fas fa-times-circle"></i> <span id="error-toast-text"></span>
-        </div>
-        <!-- End Toasts -->
+    <!-- Toasts -->
+    <div id="success-toast" class="toast-box success">
+      <i class="fas fa-check-circle"></i><span id="success-toast-text"></span>
+    </div>
+    <div id="error-toast" class="toast-box error">
+      <i class="fas fa-times-circle"></i> <span id="error-toast-text"></span>
+    </div>
+    <!-- End Toasts -->
     <script src="./js/db.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/product.js"></script>
