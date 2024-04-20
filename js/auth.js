@@ -10,6 +10,10 @@ checkUser();
 function login() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
+  if (!username || !password) {
+    showToast("e", "Please fill out every fields.");
+    return;
+  }
   DB.login(username, password, function (user) {
     if (user) {
       // User logged in successfully
@@ -31,6 +35,17 @@ function signup() {
   var password = document.getElementById("password").value;
   var confirmpassword = document.getElementById("confirmpassword").value;
   var email = document.getElementById("email").value;
+
+  if (!username || !password || !confirmpassword) {
+    showToast("e", "Please fill out every fields.");
+    return;
+  }
+
+  if (password != confirmpassword) {
+    showToast("e", "Password doesn't match");
+    return;
+  }
+
   DB.signup(username, email, password, function (callback) {
     if (callback) {
       showToast("s", "Successfully register as a user.");
