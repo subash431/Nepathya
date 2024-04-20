@@ -2,7 +2,7 @@
   font-family: "Dancing Script", cursive;
   font-size: 50px;
   margin-top: 50px;
-  color: #ff8e25;
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +40,7 @@
 
 .line_div {
   width: 70px;
-  background-color: #ff8e25;
+  background-color: var(--primary);
   height: 7px;
   border-radius: 2px;
 }
@@ -82,7 +82,7 @@
   flex-direction: row-reverse;
 }
 .vertical-line {
-  background-color: #ff8e25;
+  background-color: var(--primary);
   height: 90%;
   width: 7px;
   position: absolute;

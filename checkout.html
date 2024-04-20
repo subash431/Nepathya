@@ -47,36 +47,36 @@
       font-size: 6rem;
     }
     @media only screen and (max-width: 768px) {
-  .checkout_page {
-    margin: 2rem;
-    padding: 2rem;
-  }
+      .checkout_page {
+        margin: 2rem;
+        padding: 2rem;
+      }
 
-  .checkout_page > i {
-    font-size: 4rem;
-  }
+      .checkout_page > i {
+        font-size: 4rem;
+      }
 
-  .check-out-text > h1 {
-    font-size: 1.2rem;
-  }
+      .check-out-text > h1 {
+        font-size: 1.2rem;
+      }
 
-  .check-out-text > p {
-    font-size: 0.9rem;
-  }
-}
-
+      .check-out-text > p {
+        font-size: 0.9rem;
+      }
+    }
   </style>
   <body>
+    <!-- Navigation bar starts -->
     <header class="header">
       <nav class="navbar">
         <div class="left-navbar">
           <img height="90px" src="./img/logo.png" alt="logo" />
           <span class="divider">|</span>
-          <ul class="nav-items">
+          <ul class="nav-items" id="MenuItems">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="product.html">Product</a></li>
-            <li><a href="order.html">Order</a></li>
+
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -99,7 +99,11 @@
           </ul>
         </div>
       </nav>
+      <div class="hamburger" onclick="menutoggle()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
+    <!-- Navigation bar ends -->
     <div class="checkout_page">
       <i class="fa-regular fa-circle-check"></i>
       <div class="check-out-text">
@@ -108,7 +112,7 @@
       </div>
       <button class="p-btn" onclick="back()">Back to home</button>
     </div>
-
+    <!-- Footer section starts -->
     <footer class="footer">
       <div class="footer-main">
         <div class="footer-logo">
@@ -121,11 +125,11 @@
         <div class="footer-product">
           <h1>Product</h1>
           <ul>
-            <li><a href="#">Universal patty</a></li>
-            <li><a href="#">Plantain Tart</a></li>
-            <li><a href="#">Turnover</a></li>
-            <li><a href="#">Breads</a></li>
-            <li><a href="#">Bulla</a></li>
+            <li><a href="./product.html">Universal patty</a></li>
+            <li><a href="./product.html">Plantain Tart</a></li>
+            <li><a href="./product.html">Turnover</a></li>
+            <li><a href="./product.html">Breads</a></li>
+            <li><a href="./product.html">Bulla</a></li>
           </ul>
         </div>
         <div class="footer-product">
@@ -141,7 +145,7 @@
           <h1>Company</h1>
           <ul>
             <li><a href="#">Condition</a></li>
-            <li><a href="#">Open A Shop</a></li>
+            <li><a href="./product.html"> Shop</a></li>
             <li><a href="#">Terms</a></li>
             <li><a href="#">Technology</a></li>
           </ul>
@@ -149,10 +153,10 @@
         <div class="footer-product">
           <h1>Supports</h1>
           <ul>
-            <li><a href="#">Getting Started</a></li>
+            <li><a href="#">tarted</a></li>
             <li><a href="#">Help Center</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Reports A Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
             <li><a href="#">Bulla</a></li>
           </ul>
         </div>
@@ -168,7 +172,19 @@
       </div>
       <p>&copy; Copyright Reserved @ Allan's pastry Shop Pvt.Ltd-2024</p>
     </footer>
+    <!-- End of footer  -->
 
+    <!-- Toasts -->
+    <div id="success-toast" class="toast-box success">
+      <i class="fas fa-check-circle"></i><span id="success-toast-text"></span>
+    </div>
+    <div id="error-toast" class="toast-box error">
+      <i class="fas fa-times-circle"></i> <span id="error-toast-text"></span>
+    </div>
+    <!-- End Toasts -->
+
+    <script src="./js/db.js"></script>
+    <script src="./js/index.js"></script>
     <script src="./js/checkout.js"></script>
   </body>
 </html>
